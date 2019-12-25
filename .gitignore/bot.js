@@ -26,7 +26,7 @@ client.on('message', message =>{
         .setTitle("__Voici quelques informations à propos du serveur " + message.guild.name + "__")
         .setThumbnail(message.guild.iconURL)
         .setColor(color)
-        .addField("**Propriétaire du serveur**", message.guild.owner.displayName)
+        .addField("**Propriétaire du serveur**", message.guild.owner.displayName, true)
         .addField("**Nom du serveur**", message.guild.name, true)
         .addField("**ID du serveur**", message.guild.id, true)
         .addField("**Nombre de membres**", message.guild.memberCount + " membres", true)
