@@ -31,7 +31,7 @@ client.on('message', message =>{
         .addField("ID du serveur", message.guild.id, true)
         .addField("Nombre de membres", message.guild.memberCount + " membres", true)
         .addField("Date de création du serveur", message.guild.createdAt)
-        .setTimestamp(Date.now)
+        .setTimestamp(Date.now())
         message.channel.send(servembed)
     }
 })
