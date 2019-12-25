@@ -36,3 +36,15 @@ client.on('message', message =>{
         message.channel.send(servembed)
     }
 })
+
+client.on('message', message =>{
+    if(message.content === prefix + "info serveur"){
+        let servembed = new Discord.RichEmbed()
+        .setTitle("**Commande :** serveur \n **Description :** Affiche des informations sur le serveur. \n **Autorisation nécessaire :** Aucune \n **Usage :** " + prefix + "serveur")
+        .setThumbnail(message.guild.iconURL)
+        .setColor(color)
+        .setTimestamp(Date.now())
+        .setFooter(credits, message.author.displayAvatarURL)
+        message.channel.send(servembed)
+    }
+})
