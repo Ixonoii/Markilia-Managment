@@ -32,7 +32,7 @@ client.on('message', message =>{
         .addField("**Nombre de membres**", message.guild.memberCount + " membres", true)
         .addField("**Date de création du serveur**", message.guild.createdAt)
         .setTimestamp(Date.now())
-        .setFooter(activity, message.author.displayAvatarURL)
+        .setFooter(credits, message.author.displayAvatarURL)
         message.channel.send(servembed)
     }
 })
