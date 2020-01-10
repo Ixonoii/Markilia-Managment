@@ -23,6 +23,7 @@ client.on("message", message =>{
     .setTitle(emoji("659504785036148750") + " Veuillez utiliser cette commande sur un serveur.")
     .setColor(errorcolor)
     if(message.channel.type = "dm") return message.channel.send(privatechannel)
+    if(message.author.bot) return
     if(message.content === prefix + "test")
     message.channel.send("Test done!")
 })
