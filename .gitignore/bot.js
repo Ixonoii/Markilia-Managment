@@ -17,3 +17,12 @@ function emoji (id) {
 client.on('ready', function(){
     client.user.setActivity(status, {type: "PLAYING"})
 })
+
+client.on("message", message =>{
+    let privatechannel = new Discord.RichEmbed()
+    .setTitle(emoji("659504785036148750") + " Veuillez utiliser cette commande sur un serveur.")
+    .setColor(errorcolor)
+    if(message.channel.type = "dm") return message.channel.send(privatechannel)
+    if(message.content === prefix + "test")
+    message.channel.send("Test done!")
+})
